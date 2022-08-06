@@ -9,10 +9,23 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 
-html { font-size: 100%; background-color: var(--background);}
+html { font-size: 100%; background-color: var(--background); scroll-behavior: smooth; scroll-snap-type: y mandatory;}
+
 
 section {
     height: 100vh;
+    scroll-snap-align: start;
+}
+
+section h2 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+p {
+    margin: 1rem;
 }
 
 section#header {
@@ -166,13 +179,6 @@ nav a:hover:before {
     flex-direction: column;
 }
 
-#skills h2 {
-    text-align: center;
-    font-weight: 100;
-    font-size: 3rem;
-    color: var(--primary);
-}
-
 #skills span {
     position: absolute;
     font-size: 9.7rem;
@@ -214,4 +220,21 @@ nav a:hover:before {
 .card:hover {
     transform: translate(0, -10px);
     box-shadow: 0px 10px 10px var(--background);
+}
+
+#chi-sono {
+    padding: 2rem 8rem;
+    position: relative;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+#chi-sono-content {
+    display: flex;
+    align-items: center;
+}
+
+#chi-sono-content img {
+    max-width: 600px;
 }
