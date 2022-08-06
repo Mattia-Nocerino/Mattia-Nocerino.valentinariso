@@ -169,7 +169,14 @@
                     body.classList.add(scrollDown);
                 } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {  //up
                     body.classList.remove(scrollDown);
-                    body.classList.add(scrollUp);
+                    body.classList.add(scrollUp)
+        
+                    setTimeout(() => {
+                        if (window.pageYOffset >= 103) { 
+                            body.classList.remove(scrollUp);
+                            body.classList.add(scrollDown);
+                        }
+                    }, 1000);
                 }
             }
             lastScroll = currentScroll;

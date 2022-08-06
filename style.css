@@ -50,7 +50,7 @@ header.scroll-up, header.scroll-down {
     background-color: #FFF;
     position: fixed;
     box-shadow: 0px -5px 10px var(--primary);
-    padding: 0.5rem 1rem
+    padding: 0.5rem 1rem;
 }
 
 header.scroll-down {
