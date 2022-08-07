@@ -157,8 +157,8 @@ nav a:hover:before {
     position: absolute;
     z-index: 0;
     right: -70px;
-    bottom: -105px;
-    width: 95%;
+    bottom: 0;
+    width: 100vw;
 }
 
 #hero-text {
@@ -237,6 +237,16 @@ nav a:hover:before {
     box-shadow: 0px 10px 10px var(--background);
 }
 
+.card-content {
+    position: absolute;
+    bottom: -65%;
+}
+
+.card-content h3 {
+    color: #FFF;
+    -webkit-text-stroke: 1px black;
+}
+
 #chi-sono {
     background-color: var(--background);
 }
@@ -247,6 +257,10 @@ nav a:hover:before {
 
 #articoli .card {
     padding: 0;
+}
+
+#articoli .card-text {
+    padding: 0 2rem;
 }
 
 #contatti {
