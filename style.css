@@ -15,11 +15,6 @@ html { font-size: 100%; background-color: var(--background); scroll-behavior: sm
 section {
     height: 100vh;
     scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
 }
 
 section h2 {
@@ -28,18 +23,28 @@ section h2 {
     font-size: 3rem;
     color: var(--primary);
     position: relative;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+section .container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    justify-content: flex-start;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    height: 100%;
 }
 
 section .content {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 
 section .content img {
@@ -53,7 +58,12 @@ p {
 section#header {
     padding: 0;
     overflow: hidden;
+    display: flex;
     justify-content: flex-start;
+    background-image: url('img/valentina riso2.png');
+    background-position: bottom right;
+    background-size: 90%, 90%;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -150,14 +160,8 @@ nav a:hover:before {
 
 #hero {
     position: relative;
-    flex-grow: 1;
     padding: 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(180deg, 
-                var(--background) 80%,
-                var(--light) 100%);
+    margin: auto;
 }
 
 #hero img {
