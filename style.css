@@ -18,9 +18,8 @@ section {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: 2rem 8rem;
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 section h2 {
@@ -29,6 +28,13 @@ section h2 {
     font-size: 3rem;
     color: var(--primary);
     position: relative;
+    margin-bottom: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 section .content {
@@ -145,6 +151,7 @@ nav a:hover:before {
 #hero {
     position: relative;
     flex-grow: 1;
+    padding: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,25 +165,24 @@ nav a:hover:before {
     z-index: 0;
     right: -70px;
     bottom: 0;
-    width: 100vw;
+    width: 200vh;
 }
 
 #hero-text {
     position: relative;
     z-index: 1;
-    margin: 0 8rem;
-    width: 45%;
+    width: 50%;
 }
 
 #hero q {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     color: var(--primary);
     font-weight: bold;
     display: block;
 }
 
 #hero p {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: var(--secondary);
     font-style: italic;
     position: relative;
@@ -212,10 +218,6 @@ nav a:hover:before {
 
 .card h3 {
     margin: 1rem;
-}
-
-.card svg {
-    width: 20%;
 }
 
 .card-img {
