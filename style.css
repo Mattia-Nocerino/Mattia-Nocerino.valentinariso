@@ -9,7 +9,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 
-html { font-size: 100%; background-color: var(--background); scroll-behavior: smooth; scroll-snap-type: y mandatory;}
+html { font-size: 1.3vw; background-color: var(--background); scroll-behavior: smooth; scroll-snap-type: y mandatory;}
 
 
 section {
@@ -20,9 +20,10 @@ section {
 section h2 {
     text-align: center;
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary);
     position: relative;
+    margin-bottom: 2;
 }
 
 section .container {
@@ -34,9 +35,8 @@ section .container {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 2rem;
     height: 100%;
 }
 
@@ -45,10 +45,6 @@ section .content {
     justify-content: space-between;
     margin: auto;
     align-items: center;
-}
-
-section .content > div {
-    flex: 0 1 50%;
 }
 
 section .content > div img {
@@ -68,10 +64,10 @@ section#header {
     background-position: bottom right;
     background-size: 95%;
     background-repeat: no-repeat;
+    max-height: none;
 }
 
 header {
-    padding: 2rem 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,7 +106,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-grow: 2;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 nav a {
@@ -175,14 +171,14 @@ nav a:hover:before {
 }
 
 #hero q {
-    font-size: 3vw;
+    font-size: 2.5rem;
     color: var(--primary);
     font-weight: bold;
     display: block;
 }
 
 #hero p {
-    font-size: 2vw;
+    font-size: 2rem;
     color: var(--secondary);
     font-style: italic;
     position: relative;
@@ -202,7 +198,7 @@ nav a:hover:before {
 
 .cards {
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3rem;
     align-items: stretch !important;
 }
 
@@ -213,7 +209,7 @@ nav a:hover:before {
     background-color: #FFF;
     border: 1px solid var(--background);
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .card h3 {
@@ -222,7 +218,7 @@ nav a:hover:before {
 
 .card-img {
     position: relative;
-    height: 150px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -237,16 +233,6 @@ nav a:hover:before {
 .card:hover {
     transform: translate(0, -10px);
     box-shadow: 0px 10px 10px var(--background);
-}
-
-.card-content {
-    position: absolute;
-    bottom: -65%;
-}
-
-.card-content h3 {
-    color: #FFF;
-    -webkit-text-stroke: 1px black;
 }
 
 #chi-sono {
@@ -319,4 +305,40 @@ footer {
     color: var(--light);
     text-align: center;
     padding: 1rem;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 100%;
+    }
+
+    section .container {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    section .content {
+        margin: 0;
+    }
+
+    .cards {
+        justify-content: flex-start;
+        overflow-x: scroll;
+        scroll-behavior: smooth; 
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .content .img {
+        display: none;
+    }
+
+    section .content > div {
+        text-align: center;
+    }    
+
 }
