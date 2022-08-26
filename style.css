@@ -36,7 +36,7 @@ section .container {
 
 .container {
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem;
     height: 100%;
 }
 
@@ -45,6 +45,10 @@ section .content {
     justify-content: space-between;
     margin: auto;
     align-items: center;
+}
+
+.content .txt, .content .img {
+    flex: 0 0 50%;
 }
 
 section .content > div img {
@@ -62,7 +66,7 @@ section#header {
     justify-content: flex-start;
     background-image: url('img/valentina riso2.png');
     background-position: bottom right;
-    background-size: 95%;
+    background-size: contain;
     background-repeat: no-repeat;
     max-height: none;
 }
@@ -210,6 +214,11 @@ nav a:hover:before {
     border: 1px solid var(--background);
     cursor: pointer;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card svg {
+    height: 3rem;
+    color: var(--secondary);
 }
 
 .card h3 {
